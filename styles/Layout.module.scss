@@ -1,0 +1,20 @@
+@import "colors";
+
+@import "bootstrap-imports";
+
+.cnt{
+  background-color: $secondary2 !important;
+  padding: 3em 0;
+  height: 100vh;
+}
+
+
+.cnt_init{
+  width: 80%;
+  min-height: 33em;
+  padding: 2em 1.5em;
+  background-color: $white;
+  border: 1px solid $gray-200;
+  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.07);
+  border-radius: 1em;
+}
