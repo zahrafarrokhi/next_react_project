@@ -1,0 +1,28 @@
+@import './colors';
+@import './bootstrap-imports';
+
+// .cnt{
+//   width: 85%;
+//   @include media-breakpoint-up(md) {
+//     width: 17em !important;
+//   }
+// }
+
+.phonecnt{
+  margin: 1em 0;
+  width: 100%;
+}
+.phone{
+  width: 100% !important;
+  &::placeholder {
+    color: $gray-200;
+  }
+}
+
+.loginlabel{
+  width: 100%;
+}
+.loginbtn{
+width: 100%;
+border-radius: 4px;
+}
