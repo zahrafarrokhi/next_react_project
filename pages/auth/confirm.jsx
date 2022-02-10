@@ -22,6 +22,15 @@ const Confirm = (props) => {
   const router = useRouter();
   const [time, setTime] = useState(EXP_TIME);
   const timerRef = useRef(null);
+  const user = useSelector((state) => state?.authReducer?.me);
+
+  // when user is comeing on login page by mistake!!!!!!!
+  // !!!!!
+  useEffect(() => {
+    // if (user && user.type == 'patient')
+    // router.push('/patients/')
+  }, [user]);
+
 
   const submit = async () => {
     try {
