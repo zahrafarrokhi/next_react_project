@@ -6,6 +6,8 @@ import { authSlice, confirm } from '../../lib/slices/auth';
 import styles from '../../styles/Confirm.module.scss'
 import { persianToEnglishDigits } from '../../lib/utils';
 import { useRouter } from 'next/dist/client/router';
+
+
 const Confirm = (props) => {
   const CODE_LENGTH = 4;
   const [code, setCode] = useState('');
