@@ -2,13 +2,31 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Layout from '../../components/Layout';
 import VerificationInput from 'react-verification-input';
-import { authSlice } from '../../lib/slices/auth';
+import { authSlice, confirm } from '../../lib/slices/auth';
 import styles from '../../styles/Confirm.module.scss'
 import { persianToEnglishDigits } from '../../lib/utils';
-const confirm = (props) => {
+import { useRouter } from 'next/dist/client/router';
+const Confirm = (props) => {
   const CODE_LENGTH = 4;
   const [code, setCode] = useState('');
-  const username = useSelector((state)=>state?.authReducer?.username)
+  const [error, setError] = useState(false);
+  const username = useSelector((state)=>state?.authReducer?.username);
+  const method = useSelector((state) => state?.authReducer?.method);
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  const submit = async () => {
+    try {
+      console.log(code);
+      await dispatch(
+        confirm({ method, token: code, [method]: username }),
+      ).unwrap();
+      router.push('/patients/');
+    } catch (e) {
+      setError(true);
+    }
+  };
+
   return(
  
     <div className="d-flex flex-column">
@@ -42,8 +60,8 @@ const confirm = (props) => {
             />
             <button
               className={`btn btn-primary ${styles.btn}`}
-              // onClick={submit}
-              // disabled={time === 0 || code.length !== 4}
+              onClick={submit}
+              disabled={code.length !== 4}
             >
               ادامه
   
@@ -54,7 +72,7 @@ const confirm = (props) => {
  
   );
 }
-confirm.getLayout = (page) => (
+Confirm.getLayout = (page) => (
   <Layout backLink>{page}</Layout>
 );
-export default confirm;
+export default Confirm;
