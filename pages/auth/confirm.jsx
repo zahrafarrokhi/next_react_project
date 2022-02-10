@@ -34,7 +34,7 @@ const Confirm = (props) => {
       setError(true);
     }
   };
-
+// startTimer is called after the page is loaded on useEffect function
   const startTimer = () => {
     if (timerRef.current) clearInterval(timerRef.current);
     const timerInterval = setInterval(() => {
