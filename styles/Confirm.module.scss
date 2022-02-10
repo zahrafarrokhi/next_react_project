@@ -1,0 +1,68 @@
+
+  
+@import "./colors";
+@import "./bootstrap-imports";
+
+.titlephone {
+  color: $black;
+  font-family: IRANSansFaNum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.btn {
+  width: 230px;
+  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.07);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  @include media-breakpoint-up(md) {
+    width: 260px;
+  }
+}
+
+.phone_num {
+  color: $primary;
+  font-weight: 600 !important;
+}
+.confirm_code {
+  color: $black;
+  font-weight: 500 !important;
+}
+.codecontainer {
+  // margin: 1.2em 0rem;
+  margin-top: 0em;
+  margin-bottom: 1.2em;
+  height: 45px;
+  width: 230px;
+  @include media-breakpoint-up(md) {
+    width: 260px;
+    height: 50px;
+  }
+}
+.inpsinglesel {
+  border: 1px solid $border-color;
+}
+
+.inpsingle {
+  width: calc(230px / 4 - 1em) !important;
+
+  height: 45px !important;
+  border-radius: 12px !important;
+  margin: 0.2em !important;
+  &:first-child {
+    margin-left: 0em !important;
+  }
+  &:last-child {
+    margin-right: 0em !important;
+  }
+  line-height: 2em;
+  @include media-breakpoint-up(md) {
+    margin: 0.5em !important;
+
+    width: calc(260px / 4 - 1em) !important;
+    height: 45px !important;
+  }
+}
