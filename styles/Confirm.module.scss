@@ -47,6 +47,19 @@
 }
 
 .inpsingle {
+  /*
+            230px
+  -----------------------
+  ----  ----  ----  -----
+  box  | box | box | box
+       v     v     v
+       margin
+
+  margin = 0.5 left + 0.5em right = 1em
+  box = (230 - margin * 4) / 4
+  box = 230 / 4 - margin
+  */
+  // ------------------
   width: calc(230px / 4 - 1em) !important;
 
   height: 45px !important;
