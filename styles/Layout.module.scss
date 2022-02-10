@@ -4,8 +4,11 @@
 
 .cnt{
   background-color: $secondary2 !important;
-  padding: 7em 0;
+  padding: 10em 0;
   height: 100vh;
+  @include media-breakpoint-up(md){
+    padding: 7em 0;
+  }
 }
 
 
