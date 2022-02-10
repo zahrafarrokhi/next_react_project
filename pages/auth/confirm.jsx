@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import VerificationInput from 'react-verification-input';
 import { authSlice } from '../../lib/slices/auth';
 import styles from '../../styles/Confirm.module.scss'
+import { persianToEnglishDigits } from '../../lib/utils';
 const confirm = (props) => {
   const CODE_LENGTH = 4;
   const [code, setCode] = useState('');
