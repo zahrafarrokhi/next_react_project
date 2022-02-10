@@ -134,9 +134,12 @@ const Confirm = (props) => {
             :
             {String(time % 60).padStart(2, '0')}
           </div>
+          
         </div>
     
-
+      {error && <div className={`d-flex flex-row ${styles.color}`}>
+      کد وارد شده نامعتبر است.
+        </div>}
     </div>
  
   );
