@@ -5,7 +5,7 @@ const confirm = (props) => {
   return(
   
     <div className="d-flex flex-column">
-      لطفا کد ارسال شده به شماره
+    
     </div>
   
   )
