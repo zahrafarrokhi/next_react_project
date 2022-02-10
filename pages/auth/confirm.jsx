@@ -6,6 +6,7 @@ import { authSlice, confirm } from '../../lib/slices/auth';
 import styles from '../../styles/Confirm.module.scss'
 import { persianToEnglishDigits } from '../../lib/utils';
 import { useRouter } from 'next/dist/client/router';
+import { GrRefresh } from 'react-icons/gr';
 
 
 const Confirm = (props) => {
@@ -69,6 +70,21 @@ const Confirm = (props) => {
   
             </button>
           </div>
+          <div className={`p-2 d-flex   d-column justify-content-between ${styles.refreshcnt}`}>
+          <div
+            className={`d-flex  ${styles.resendcode}`}
+        
+          
+          >
+            ارسال مجدد
+          </div>
+          <div className="d-flex ">
+            <GrRefresh className={`${styles.refresh}`} />
+           
+
+          </div>
+        </div>
+    
 
     </div>
  
