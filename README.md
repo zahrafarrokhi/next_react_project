@@ -46,3 +46,7 @@ Component.getLayout = (page) => {
 }
 
 ```
+# point 
+```
+git push --tags
+```
